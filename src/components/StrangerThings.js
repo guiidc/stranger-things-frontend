@@ -17,7 +17,7 @@ const {
 } = process.env;
 
 const strangerThingsConfig = {
-  REACT_APP_H: REACT_APP_HAWKINS_URL,
+  url: REACT_APP_HAWKINS_URL,
   timeout: REACT_APP_HAWKINS_TIMEOUT,
 };
 
@@ -113,8 +113,6 @@ class StrangerThings extends React.Component {
     );
   }
 
-  // { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null }
-
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -126,6 +124,7 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
+          { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null }
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
