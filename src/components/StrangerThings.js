@@ -113,6 +113,8 @@ class StrangerThings extends React.Component {
     );
   }
 
+  // { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null }
+
   render() {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
@@ -129,7 +131,6 @@ class StrangerThings extends React.Component {
               {' '}
               Mudar de Realidade
             </button>
-            { REACT_APP_DEVELOPMENT === 'true' ? <span>Em desenvolvimento</span> : null }
           </div>
 
           <div>
@@ -160,5 +161,4 @@ class StrangerThings extends React.Component {
     );
   }
 }
-
 export default StrangerThings;
