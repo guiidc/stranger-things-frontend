@@ -15,6 +15,8 @@ const {
   REACT_APP_UPSIDEDOWN_TIMEOUT,
 } = process.env;
 
+let { PROD_MOD } = process.env;
+
 const strangerThingsConfig = {
   REACT_APP_H: REACT_APP_HAWKINS_URL,
   timeout: REACT_APP_HAWKINS_TIMEOUT,
@@ -116,8 +118,7 @@ class StrangerThings extends React.Component {
     const {
       hereIsTheUpsideDownWorld, characterName, characters, page,
     } = this.state;
-    let { PROD_MOD } = process.env;
-    PROD_MOD = PROD_MOD === 'true';
+    PROD_MOD = PROD_MOD === 'false';
     return (
       <div
         className={ `reality ${getRealityClass(
